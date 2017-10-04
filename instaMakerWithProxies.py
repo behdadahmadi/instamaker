@@ -36,7 +36,6 @@ def banner():
 
 def main():
     banner()
-    'http://192.99.68.187:8080'
     proxies = { 
         'http':'http://192.99.68.187:8080',
         'https':'http://192.99.68.187:8080'
@@ -54,7 +53,8 @@ def main():
                'Accept-Language':'en-US,en;q=0.8',
                'upgrade-insecure-requests':'1'}
 
-    s = requests.Session(proxies=proxies)
+    s = requests.Session()
+    s.proxies.update(proxies)
     s.get('https://instagram.com',headers=getHeaders)
     guid = randomString(8) + '-' + randomString(4) + "-" + randomString(4) + '-' + randomString(4) + '-' +randomString(12)
     device_id = 'android-' + str(HMAC(str(random.randint(1000,9999))))[0:min(64,16)]
