@@ -1,4 +1,7 @@
 # InstaMaker
+
+[NOT WORKING ANYMORE DUE TO CHANGES OF INSTAGRAM API] IF ANY SOLUTION FOUND,I WILL CHANGE IT TO WORK
+
 Instagram account maker
 
 First and only Instagram account maker written in Python
